@@ -1,0 +1,124 @@
+body {
+    overflow: hidden;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1px;
+    margin-top: 150px;
+}
+.order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.242);
+}
+h2 {
+    text-align: center;
+}
+
+.order-block {
+    display: flex;
+    gap: 80px;
+}
+input {
+    border: 1px solid black;
+    padding-left: 10px;
+    width: 300px; height: 40px;
+    outline: none;
+}
+.order form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+}
+.product-curt {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 30px;
+    border: 2px solid black;
+    overflow-y: scroll;
+}
+.product-curt::-webkit-scrollbar {
+    width: 5px;
+    background: rgba(0, 0, 0, 0.185);
+}
+.product-curt::-webkit-scrollbar-thumb {
+    background: black;
+}
+.product-curt h3 {
+    text-align: center;
+}
+.text h3 {
+    text-align: left;
+}
+button {
+    border: 1px solid black;
+    width: 100%; padding: 10px 0;
+    background: black;
+    color: white;
+    transition: all 1s;
+    cursor: pointer;
+}
+img {
+    max-width: 100px; max-height: 100px; min-width: 40px; min-height: 40px;
+    z-index: -2;
+}
+.btn {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+.btn:hover {
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.334);
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: -2;
+}
+.prise {
+    text-align: center;
+}
+.prise p {
+    font-weight: bold;
+}
+.ofer {
+    text-align: center;
+}
+@media screen and (max-width: 1250px) {
+    main, header, footer {
+        padding: 0;
+    }
+
+}
+@media screen and (max-width: 655px) {
+    body {
+        overflow-y: visible;
+    }
+    main {
+        margin: 0;
+    
+    }
+    footer {
+        position: relative;
+    }
+    .order-block {
+        flex-direction: column;
+        align-items: center;
+    }
+}

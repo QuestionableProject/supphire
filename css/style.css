@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
+* {
+    font-family: 'Heebo', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+
+}
+body {
+    background: aliceblue;
+}
+body::-webkit-scrollbar {
+    width: 5px;
+    background: rgba(0, 0, 0, 0.185);
+}
+body::-webkit-scrollbar-thumb {
+    background: black;
+}
+header, main, footer {
+    padding: 0 100px;
+}
+
+/* popup */
+.popup-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-back {
+    position: fixed;
+    background: rgba(94, 94, 94, 0.477);
+    width: 100%; height: 100vh;
+    z-index: 7;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+    cursor: pointer;
+}
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    width: 500px; height: 500px;
+    background-color: white;
+    position: fixed;
+    z-index: 8;
+    top: 10%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    border-radius: 30px;
+    text-align: center;
+}
+.popup form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.list-menu li {
+    cursor: pointer;
+}
+.popup input {
+    border: 1px solid black;
+    outline: none;
+    padding-left: 10px;
+    width: 200px; height: 40px;
+    background: white;
+}
+.popup button {
+    border: 1px solid black;
+    width: 200px; height: 40px;
+    background: black;
+    color: white;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.register-form {
+    visibility: hidden;
+    opacity: 0%;
+    transition: all 1s;
+}
+.login p {
+    transition: all 1s;
+    cursor: pointer;
+}
+
+
+/* header */
+header {
+    background: black;
+    display: grid;
+    width: 100%; min-height: 70px;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.393);
+    position: fixed;
+    z-index: 6;
+}
+.menu ul{
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+}
+header li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: aliceblue;
+}
+header li svg {
+    width: 30px; height: 30px;
+    cursor: pointer;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.logo-svg {
+    cursor: pointer;
+}
+
+.catalog {
+    width: 160px;
+}
+.catalog-btn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+    height: 70px;
+    transition: all 1s;
+    padding: 0 10px;
+}
+.catalog-btn:hover {
+    background-color: rgba(255, 255, 255, 0.266);
+}
+.catalog-btn svg {
+    fill: aliceblue;
+    width: 30px; height: 30px;
+}
+.catalog-btn h2 {
+    color: aliceblue;
+}
+
+.catalog-menu, .one-one, .two-one, .tree-one{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    z-index: 4;
+    position: absolute;
+    width: 200px;
+    background: white;
+    box-shadow: 4px 7px 5px rgba(0, 0, 0, 0.468);
+    padding: 0;
+    gap: 0px;
+    opacity: 0%;
+}
+.catalog-menu  li, .statuetki li, .brelki li, .ruckzak li{
+    color: black;
+    padding: 15px;
+    transition: all 0.6s;
+}
+.catalog-menu  li:hover{
+    background: black;
+    color: aliceblue;
+}
+.tree-one, .two-one, .one-one, .catalog-menu {
+    position: absolute;
+    visibility: hidden;
+    cursor: pointer;
+    opacity: 0%;
+    transition: all 0.7s;
+}
+.one-one {
+    top: 0px; left: 200px;
+}
+.two-one {
+    top: 53px; left: 200px;
+}
+.tree-one {
+    top: 106px; left: 200px;
+}
+.end, .ofer {
+    position: absolute;
+    opacity: 0%;
+    visibility: hidden;
+    transition: all 1s;
+}
+.displayonn {
+    opacity: 100%;
+    visibility: visible;
+}
+.displayoff {
+    opacity: 0%;
+    visibility: hidden;
+}
+.abs {
+    display: none;
+}
+
+
+/* footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; min-height: 100px;
+    padding: 0 100px;
+    background: black;
+    color: aliceblue;
+    font-weight: 700;
+    margin-top: 40px;
+}
+footer p {
+    font-size: 13px;
+}
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer a {
+    color: aliceblue;
+    text-decoration: none;
+    transition: all 1s;
+}
+footer a:hover, .product li a:hover, .login p:hover {
+    color: rgb(78, 109, 233);
+}
+footer .social svg {
+    width: 30px; height: 30px;
+    fill: aliceblue;
+    transition: all 1s;
+}
+footer .social svg:hover {
+    fill: rgb(140, 191, 237);
+}
+footer .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.footer-block-two, .footer-block-one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@media screen and (max-width: 990px) {
+    header {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .logo {
+        grid-column: 1/2 span;
+        padding-top: 5px;
+    }
+    .catalog {
+        grid-column: 1;
+        grid-row: 2;
+        display: block;
+        margin: 0  auto 0 auto;
+    }
+    .menu {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+@media screen and (max-width: 770px) {
+    .popup {
+        width: 300px;
+    }
+    
+}
+@media screen and (max-width: 655px) {
+    header {
+        position: relative;
+        grid-template-columns: 1fr;
+    }
+    .catalog {
+       grid-row: 3;
+    } 
+    .menu {
+        grid-row: 2;
+        padding: 10px 0;
+    }
+    footer {
+        flex-direction: column; 
+        justify-content: center;
+        gap: 30px;
+    }
+    .one-one, .two-one, .tree-one {
+        position: relative;
+        top: 0; left: 0;
+    }
+    header ul, .btn-sort {
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+    }
+}

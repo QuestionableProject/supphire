@@ -1,0 +1,328 @@
+/* slaider */
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 60px;
+    width: 100%; max-height: 1000px;
+}
+.slider-block {
+    margin-top: 120px;
+    overflow: hidden;
+}
+.images {
+    display: flex;
+    transition: all 1.5s;
+}
+.slider-block img {
+    min-width: 100%;
+    height: auto;
+}
+.slider button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    position: absolute;
+    border: 0;
+    background: rgba(0, 0, 0, 0.647);
+    z-index: 4;
+}
+.slider button path {
+    fill: white;
+}
+.slider button:nth-child(1) {
+    left: 0px;
+}
+.slider button:nth-child(2) {
+    right: 0px;
+}
+
+
+/* main */
+
+/* Товары */
+.product {
+    margin-bottom: 100px;
+}
+.product ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.product h1 {
+    text-align: center;
+}
+.product select {
+    display: block;
+    margin: 30px 0 30px auto;
+}
+.product li a {
+    color: black;
+    transition: all 0.7s;
+}
+.grid-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+.block-product {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    background: aliceblue;
+    
+    padding: 10px;
+    transition: 1s all;
+}
+.block-product:hover {
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.273);
+}
+.block-product h3 {
+    font-weight: 700;
+    color: black;
+}
+.block-product img {
+    max-width: 300px;
+    max-height: 300px;
+}
+.block-product-two {
+    position: absolute;
+    z-index: -1;
+}
+
+.block-product button {
+    cursor: pointer;
+    border: 1px solid black;
+    color: black;
+    padding: 7px 30px;
+    background-color: aliceblue;
+    transition: all 0.7s;
+}
+.block-product button:hover {
+    color: white;
+    background-color: black;
+}
+
+/* О компании */
+.aboutme {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 220px;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.aboutme-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 1s all;
+}
+.aboutme-block:hover {
+    transform: translateY(-20px);
+}
+main h2  {
+    text-align: center;
+}
+.aboutme svg {
+    width: 50px; height: 50px;
+}
+.Recommendations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 20px;
+}
+
+/* Рекомендации */
+.Recommendations div {
+    width: 400px;
+    transition: 1s all;
+    color: white;
+}
+.Recommendations p {
+    display: block;
+    bottom: 0;
+    padding: 20px;
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.521);
+    opacity: 0;
+    transition: all 1s;
+}
+.Recommendations div:hover p {
+opacity: 100%;
+}
+
+.Recommendations div:hover {
+    box-shadow: inset 0px 0px 20px 10px black;
+}
+.Recommendations div:nth-child(2) {
+    grid-row: 2 span;
+    background: url(../img/sovet1.jpg) center/140% ;
+}
+.Recommendations div:nth-child(1) {
+    background: url(../img/sovet.jpg) center/100% no-repeat;
+}
+.Recommendations div:nth-child(3) {
+    background: url(../img/sovet2.jpg) center/100% no-repeat;
+}
+.Recommendations div:nth-child(4) {
+    background: url(../img/sovet3.jpg) left/100% no-repeat;
+}
+.Recommendations div:nth-child(5) {
+    background: url(../img/sovet4.jpg) center/100% no-repeat;
+}
+.Recommendations div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Подписка */
+.subscription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; width: 100%;
+    background: url(../img/fill.png) repeat black;
+    margin-top: 50px;
+}
+.subscription-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    color: aliceblue;
+    max-width: 600px; height: 200px;
+    background: black;
+    text-align: center;
+    padding: 20px;
+}
+.subscription input {
+    padding-left: 10px;
+    height: 40px; width: 300px;
+    outline: none;
+}
+.subscription button {
+    border: 1px solid white;
+    background-color: white;
+    padding: 0 20px; height: 40px;
+    transition: 1s all;
+}
+.subscription button:hover {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+.abc {
+    display: none;
+}
+.btn-sort li{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1300px) {
+    .grid-product {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .Recommendations {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        justify-items: center;
+    }
+    
+}
+@media screen and (max-width: 1250px) {
+    main, header, footer {
+        padding: 0;
+    }
+    h1 {
+        text-align: center;
+    }
+    .grid-product {
+        justify-items: center;
+    }
+}
+@media screen and (max-width: 1100px) {
+    
+    .grid-product {
+        grid-template-columns: 1fr 1fr ;
+    }
+    .aboutme {
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(2, 150px);
+    }
+    .aboutme-block {
+        padding: 10px;
+    }
+    .Recommendations {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 200px);
+        justify-content: center;
+    }
+    .Recommendations a:nth-child(2) {
+        grid-row-start: 2;
+    }
+    .Recommendations a {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    
+}
+@media screen and (max-width: 990px) {
+    .slider {
+        margin-top: 50px;
+    }
+    
+}
+@media screen and (max-width: 770px) {
+    .slider {
+        display: none;
+    }
+    .grid-product {
+        grid-template-columns: 1fr  ;
+    }
+    .block-product{
+        width: auto;
+    }
+    main h2 {
+        margin-top: 170px;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    main h2 {
+        margin-top: 20px;
+    }
+    .aboutme {
+        grid-template-columns: 300px;
+        align-items: stretch;
+    }
+    .subscription-block form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .subscription button {
+        padding: 0;
+        width: 100%;
+    }
+    
+}
